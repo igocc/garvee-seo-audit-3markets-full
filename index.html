@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GARVEE 三站 SEO 与 SSR 审计</title>
+<style>
+:root{--bg:#f5f6f8;--ink:#16202e;--muted:#5b6878;--line:#dde3ea;--card:#fff;--accent:#6b46c1;--red:#b02a2e;--amber:#8a5a04;--green:#136c4d;--redbg:#fbeaea;--amberbg:#fdf3dd;--greenbg:#e6f4ee;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}body{margin:0}
+header{background:#16202e;color:#fff;padding:26px max(18px,calc((100vw - 1400px)/2))}
+header h1{margin:8px 0 6px;font-size:clamp(21px,3.4vw,30px)}
+header p{margin:0;color:#bcc7d6;font-size:13px}
+.brand{font-size:12px;letter-spacing:.08em;color:#c3b3ea;font-weight:700}
+main{max-width:1400px;margin:0 auto;padding:22px 18px 70px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card .k{font-size:12px;color:var(--muted)}.card .v{font-size:27px;font-weight:700;margin-top:6px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:20px}
+h2{font-size:16px;margin:0 0 14px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+input,select,button,a.dl{font:inherit;font-size:13px;border:1px solid var(--line);border-radius:7px;padding:8px 11px;background:#fff;color:var(--ink)}
+input{min-width:190px}button{cursor:pointer}button:hover{border-color:var(--accent)}
+a.dl{text-decoration:none;margin-left:auto}a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f2f4f7;color:var(--muted);font-size:12px;text-align:left;white-space:nowrap;position:sticky;top:0}
+td,th{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.scroll{overflow:auto;max-height:620px}
+td.u{max-width:330px;overflow-wrap:anywhere}td.u small{display:block;color:var(--muted);margin-top:4px}
+.tag{display:inline-block;border-radius:4px;padding:2px 7px;font-size:11px;white-space:nowrap}
+.e{background:var(--redbg);color:var(--red)}.w{background:var(--amberbg);color:var(--amber)}.o{background:var(--greenbg);color:var(--green)}
+.muted{color:var(--muted);font-size:12px}
+.issues{color:var(--red);font-size:12px;line-height:1.6}
+.pager{display:flex;justify-content:flex-end;gap:10px;align-items:center;margin-top:14px}
+.legend{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+details{margin-top:10px}summary{cursor:pointer;font-size:13px;font-weight:600}
+pre{background:#f5f6f8;padding:12px;border-radius:7px;font-size:12px;overflow:auto;max-height:320px;white-space:pre-wrap;word-break:break-word}
+footer{font-size:12px;color:var(--muted);padding-top:8px;line-height:1.8}
+@media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}main{padding:16px 10px 50px}section{padding:13px}a.dl{margin-left:0}input{width:100%;min-width:0}}
+</style></head><body>
+<header><div class="brand">GARVEE · SEO / SSR AUDIT</div><h1>三站页面类型与 SSR 证据审计</h1>
+<p id="sub">加载中</p></header>
+<main>
+<div class="cards">
+  <div class="card"><div class="k">已审计页面</div><div class="v" id="nPages">—</div></div>
+  <div class="card"><div class="k">有明确缺陷</div><div class="v" id="nErr" style="color:var(--red)">—</div></div>
+  <div class="card"><div class="k">仅有提示项</div><div class="v" id="nWarn" style="color:var(--amber)">—</div></div>
+  <div class="card"><div class="k">无问题</div><div class="v" id="nOk" style="color:var(--green)">—</div></div>
+  <div class="card"><div class="k">4xx 页面</div><div class="v" id="n404">—</div></div>
+  <div class="card"><div class="k">Jev 已判断</div><div class="v" id="nJev">—</div></div>
+</div>
+
+<section><h2>按市场汇总</h2><div class="scroll"><table><thead><tr><th>市场</th><th>页面数</th><th>有缺陷</th><th>提示项</th><th>无问题</th><th>4xx</th></tr></thead><tbody id="mkt"></tbody></table></div></section>
+
+<section><h2>按页面类型汇总</h2><div class="scroll"><table><thead><tr><th>市场</th><th>页面类型</th><th>页面数</th><th>有缺陷</th><th>提示项</th><th>无问题</th></tr></thead><tbody id="fam"></tbody></table></div></section>
+
+<section><h2>逐页结果</h2>
+<div class="legend">每行一个页面。严重度：<span class="tag e">缺陷</span> 影响抓取或索引；<span class="tag w">提示</span> 影响分享或体验；<span class="tag o">正常</span> 未发现问题。</div>
+<div class="bar">
+  <label>市场 <select id="fMarket"><option value="">全部</option></select></label>
+  <label>类型 <select id="fFamily"><option value="">全部</option></select></label>
+  <label>严重度 <select id="fSev"><option value="">全部</option><option value="error">有缺陷</option><option value="warn">提示项</option><option value="ok">无问题</option></select></label>
+  <label>查找 <input id="fSearch" type="search" placeholder="URL / 标题 / 问题"></label>
+  <a class="dl" href="pages.csv" download>下载逐页 CSV</a>
+</div>
+<div class="scroll"><table><thead><tr><th>市场 / 类型</th><th>URL / 标题</th><th>HTTP</th><th>SSR</th><th>Jev</th><th>发现的问题</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager"><span class="muted" id="info"></span><button id="prev">上一页</button><button id="next">下一页</button></div>
+</section>
+
+<section><h2>失败次数最多的规则</h2>
+<details open><summary>展开明细</summary><pre id="rules"></pre></details>
+<p class="muted">同一规则在原始 HTML 和三种浏览器状态中会各计一次，因此浏览器相关条目约为源码条目的三倍。</p>
+</section>
+
+<footer>
+数据来源：测试站原始 HTTP 响应、无 JS / JS / 交互三种浏览器快照、Jev 语义判断。<br>
+规则依据：项目已确认的 canonical / robots / 分享标签契约。预期值不取自页面自身观测值。<br>
+SSR 结论基于源码与渲染结果的对照；缺少证据的项标为待确认，不按通过处理。
+</footer>
+</main>
+<script src="data.js"></script>
+<script>
+'use strict';
+const DATA=window.AUDIT_DATA;
+const $=id=>document.getElementById(id);
+let page=0;const SIZE=30;
+const SEV={error:['e','缺陷'],warn:['w','提示'],ok:['o','正常']};
+
+function render(){
+  const t=DATA.totals;
+  $('sub').textContent=`生成时间 ${DATA.generated} · 覆盖 ${Object.keys(DATA.byMarket).length} 个市场 · ${t.captured} 页已保存原始响应 · ${t.browser} 页完成浏览器取证`;
+  $('nPages').textContent=t.pages;$('nErr').textContent=t.error;$('nWarn').textContent=t.warn;
+  $('nOk').textContent=t.ok;$('n404').textContent=t.http404;$('nJev').textContent=t.judged;
+
+  const mk=Object.entries(DATA.byMarket).map(([k,v])=>
+    `<tr><td>${({us:'美国站',uk:'英国站',ca:'加拿大站'})[k]||k}</td><td>${v.total}</td><td>${v.error}</td><td>${v.warn}</td><td>${v.ok}</td><td>${v.http404}</td></tr>`).join('');
+  $('mkt').innerHTML=mk;
+
+  const fam=Object.entries(DATA.byFamily).map(([k,v])=>{const [m,f]=k.split('|');
+    return `<tr><td>${({us:'美国站',uk:'英国站',ca:'加拿大站'})[m]||m}</td><td>${f}</td><td>${v.total}</td><td>${v.error}</td><td>${v.warn}</td><td>${v.ok}</td></tr>`;}).join('');
+  $('fam').innerHTML=fam;
+
+  const opts=(el,vals)=>{const cur=el.value;el.length=1;vals.forEach(v=>el.add(new Option(v,v)));el.value=cur;};
+  opts($('fMarket'),[...new Set(DATA.pages.map(p=>p.marketLabel))]);
+  opts($('fFamily'),[...new Set(DATA.pages.map(p=>p.familyLabel))]);
+  $('rules').textContent=DATA.topRules.map(([r,n])=>`${String(n).padStart(4)}  ${r}`).join('\n');
+  list();
+}
+
+function list(){
+  const m=$('fMarket').value,f=$('fFamily').value,s=$('fSev').value,q=$('fSearch').value.toLowerCase();
+  const rows=DATA.pages.filter(p=>
+    (!m||p.marketLabel===m)&&(!f||p.familyLabel===f)&&(!s||p.severity===s)&&
+    (!q||JSON.stringify([p.url,p.title,p.issues]).toLowerCase().includes(q)));
+  const pages=Math.max(1,Math.ceil(rows.length/SIZE));page=Math.min(page,pages-1);
+  $('rows').innerHTML=rows.slice(page*SIZE,(page+1)*SIZE).map(p=>{
+    const [cls,label]=SEV[p.severity];
+    const u=p.url.split('.run.app').pop()||'/';
+    const scen=p.scenario!=='default'?`<small>状态：${p.scenario}</small>`:'';
+    return `<tr>
+      <td>${p.marketLabel}<small class="muted">${p.familyLabel}</small></td>
+      <td class="u"><a href="${p.url}" target="_blank" rel="noopener noreferrer">${u}</a><small>${p.title||'（无标题）'}</small>${scen}</td>
+      <td>${p.status??'—'}</td>
+      <td class="muted">${p.ssr}</td>
+      <td class="muted">${p.jev}</td>
+      <td><span class="tag ${cls}">${label}</span><div class="issues">${p.issues.join('；')||'无明显异常'}</div></td>
+    </tr>`;}).join('');
+  $('info').textContent=`第 ${page+1} / ${pages} 页 · 共 ${rows.length} 条`;
+  $('prev').disabled=page===0;$('next').disabled=page>=pages-1;
+}
+['fMarket','fFamily','fSev','fSearch'].forEach(id=>$(id).addEventListener('input',()=>{page=0;list();}));
+$('prev').onclick=()=>{page--;list();};$('next').onclick=()=>{page++;list();};
+render();
+</script></body></html>

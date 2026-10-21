@@ -1,0 +1,5896 @@
+{
+  "title": "GARVEE 三站 · 页面场景与 SSR 审计",
+  "per_type": 5,
+  "markets": {
+    "us": {
+      "origin": "https://garvee-us-test-resolve-547493248390.us-east4.run.app",
+      "source_origins": [
+        "https://www.garvee.com",
+        "https://garvee.com"
+      ],
+      "locale": "en-US",
+      "currency": "USD",
+      "render_pages": [
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/blogs/news"
+      ],
+      "seeds": [
+        "/pages/diy-ideas",
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/collections/flash-deals",
+        "/collections/clearance-sale",
+        "/blogs/news",
+        "/search?q=tools",
+        "/account/login",
+        "/account/register",
+        "/cart"
+      ],
+      "singletons": [
+        "/",
+        "/account/login",
+        "/account/register",
+        "/cart",
+        "/search?q=tools"
+      ]
+    },
+    "uk": {
+      "origin": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app",
+      "source_origins": [
+        "https://garvee.co.uk"
+      ],
+      "locale": "en-GB",
+      "currency": "GBP",
+      "render_pages": [
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/blogs/news"
+      ],
+      "seeds": [
+        "/pages/diy-ideas",
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/blogs/news",
+        "/search?q=tools",
+        "/account/login",
+        "/account/register",
+        "/cart"
+      ],
+      "singletons": [
+        "/",
+        "/account/login",
+        "/account/register",
+        "/cart",
+        "/search?q=tools"
+      ]
+    },
+    "ca": {
+      "origin": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app",
+      "source_origins": [
+        "https://www.garvee.ca",
+        "https://garvee.ca"
+      ],
+      "locale": "en-CA",
+      "currency": "CAD",
+      "render_pages": [
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/blogs/news"
+      ],
+      "seeds": [
+        "/pages/diy-ideas",
+        "/collections/new-arrivals",
+        "/collections/best-sellers",
+        "/blogs/news",
+        "/search?q=tools",
+        "/account/register",
+        "/cart"
+      ],
+      "singletons": [
+        "/",
+        "/account/register",
+        "/cart",
+        "/search?q=tools"
+      ]
+    }
+  },
+  "policies": {
+    "query_noindex": true,
+    "canonical_by_family": true,
+    "canonical_origins": {
+      "us": "https://garvee-us-test-resolve-547493248390.us-east4.run.app",
+      "uk": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app",
+      "ca": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app"
+    },
+    "guest_auth_index": true,
+    "require_og_url": true,
+    "offer_url_matches_canonical": true,
+    "share_image_validation": "presence",
+    "required_share_images": [
+      "og:image",
+      "twitter:image"
+    ],
+    "source": "Returned workbook H01-H08/H17 and chat acceptance of Q1: each market uses its own test origin; values are not inferred from observed tags"
+  },
+  "collection": {
+    "robots_mode": "authorized_qa",
+    "authorized_origins": [
+      "https://garvee-us-test-resolve-547493248390.us-east4.run.app",
+      "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app",
+      "https://garvee-ca-test-resolve-547493248390.us-east4.run.app"
+    ],
+    "authorization_source": "Returned workbook H05: QA collection may ignore robots on the three test origins; retain robots observations, origin restrictions and request limits"
+  },
+  "delivery": {
+    "dashboard": "loopback",
+    "exports": [
+      "html",
+      "csv"
+    ],
+    "publication": "none"
+  },
+  "classification": [
+    {
+      "pattern": "^/collections/(new-arrivals|best-sellers|flash-deals|clearance-sale)/?$",
+      "family": "category",
+      "business_role": "topic"
+    },
+    {
+      "pattern": "^/pages/activity-",
+      "family": "campaign",
+      "business_role": "campaign"
+    },
+    {
+      "pattern": "^/pages/diy-ideas$",
+      "family": "blog_home"
+    },
+    {
+      "pattern": "^/pages/(about-garvee|contact|contact-us|accessibility-statement|track-your-order|payments-policy|warranty-policy|carebox-package-protection|affiliate|influencer-program|share-and-win|mygarvees-rewards|extended-service-protection|business)$",
+      "family": "footer"
+    }
+  ],
+  "samples": [
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/agents.md",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "77a66b8daaef00b638fb"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/brands-authorization",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "65537e79aef3c6e8e303"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/cibeat",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d455c82e995a434c3cb0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/clearance-2025",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "28b93be4aea5c8bdb765"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/customer-feedback",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d43c3593e94f5d5b8d95"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "c2a3b9649c61b0fe1b53"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/air-conditioner",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ef98c1b57a8c8ac308d3"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/automotive",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "5cffed4ac6301b09471e"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/buying-guides",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "a036c0a9228beead0fe5"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/home-improvement-ideas",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "36e440d41993eb3d54ba"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden/a-comprehensive-guide-to-pump-selection",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "5329015ffeacd4988fd1"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden/a-guide-to-choose-the-perfect-fire-pits",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ac880d42b9d7a63b246e"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden/advantages-of-commercial-retractable-cord-reels",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "08d7063f87d0517f40f0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden/benefits-of-adding-a-fireplaces-set",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "83eb140f39eccd1637d8"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/blogs/agriculture-garden/benefits-of-hydroponic-pods",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "090c82e86680712c9d18"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%AF%9B%E5%88%A9%E4%BA%A7%E5%93%81%E9%9C%80%E5%8F%96%E6%B6%88%E7%AB%99%E5%86%85%E6%8A%98%E6%89%A3",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "146f2e962ec9bd87b72a"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%AF%9B%E5%88%A9%E4%BA%A7%E5%93%81%E9%9C%80%E5%8F%96%E6%B6%88%E7%AB%99%E5%86%85%E6%8A%98%E6%89%A3?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "3a962ebf50b22ab3e0ea"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%AF%9B%E5%88%A9%E4%BA%A7%E5%93%81%E9%9C%80%E5%8F%96%E6%B6%88%E7%AB%99%E5%86%85%E6%8A%98%E6%89%A3?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "83c9d5ceb627b0a33f92"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%AF%9B%E5%88%A9%E4%BA%A7%E5%93%81%E9%9C%80%E5%8F%96%E6%B6%88%E7%AB%99%E5%86%85%E6%8A%98%E6%89%A3?after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "category",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "09c91bec7739d5cb94e4"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%AF%9B%E5%88%A9%E4%BA%A7%E5%93%81%E9%9C%80%E5%8F%96%E6%B6%88%E7%AB%99%E5%86%85%E6%8A%98%E6%89%A3?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "2566b48d897f5c785a24"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BF%9D%E9%99%A9%E4%B8%8D%E5%8F%82%E4%B8%8E%E6%8A%98%E6%89%A3",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "69f08d30be4b101d6ef0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BF%9D%E9%99%A9%E4%B8%8D%E5%8F%82%E4%B8%8E%E6%8A%98%E6%89%A3?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "96e47b7f1391083935df"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BF%9D%E9%99%A9%E4%B8%8D%E5%8F%82%E4%B8%8E%E6%8A%98%E6%89%A3?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a5eed386f18865d10cf8"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BF%9D%E9%99%A9%E4%B8%8D%E5%8F%82%E4%B8%8E%E6%8A%98%E6%89%A3?after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "category",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "3c595575162eda8ff988"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E4%BF%9D%E9%99%A9%E4%B8%8D%E5%8F%82%E4%B8%8E%E6%8A%98%E6%89%A3?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "65edef8f3ba53733f658"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-650-50",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "fc0a1ccdd417b1039f27"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-650-50?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b3f783c5bd6ac42e2bcb"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-650-50?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "20b86f7c7a9c60171a7b"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-650-50?after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "category",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "4b0df29a0a0e11545487"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-650-50?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "c28e65e29ac62b63e815"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-900-100",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "80eaeec6665fc7736b3c"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-900-100?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "d1f461f1b40a959c8775"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-900-100?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "e836971f5138448ad7d0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-900-100?after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "category",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "95d286097fdd553614ce"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-900-100?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "78244d2b866539a1c623"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-home-decor-1",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "04c7304a663f556c8582"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-home-decor-1?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "37bcca0932b409206517"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-home-decor-1?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "48798a2363645efe0cd6"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-home-decor-1?after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "category",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ed7367bf95ba3d653549"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94-home-decor-1?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "6394645aed8a29e35f47"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/about-garvee",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "065e9a206e3485dd2c79"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/about-ra",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "9d6df43b74d11e792c2c"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/accessibility-statement",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "53d03d8335eda62cc8af"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/acekool",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "f4e10d25af69410541d4"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/affiliate",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "b6965778d21925e097c9"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/agriculture-forestry-equipments",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "31313232b104f3c97f9d"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/aov-400",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "437ecd1e60fc255f158f"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/carebox-package-protection",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "85aca84980b5c9a66e5d"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/contact",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "4923c58845ff8095829f"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/extended-service-protection",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "6eb373ffac0319f5a0ca"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/influencer-program",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "1c56901406110003f582"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/mygarvees-rewards",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "6dac463602f79d7f2456"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/outlets",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "d23206ff51b8646fd550"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/payments-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "3b08482179c64eb9ede6"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/privacy-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "7bb1005fef76d0424c2d"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/privacy-policy-for-esp-service",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "44af2f2ccda3bf08f9ef"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/product-reviews",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "f5621380b1b82bcf8e4b"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/refund-return-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5eb8218201fd07ac9915"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/share-and-win",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5c59866c7412694fe90f"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/shipping-payment",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "7ea289e2b0afc8bc3df3"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/shipping-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "8da964232ed55329e24c"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/terms-of-service",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5d4f3fa81fb1afe7824b"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/track-your-order",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "6413e4601af965a5b101"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/warranty-easy-return",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "81b2c2b2ed5f88dc67f8"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/warranty-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "e3bc5529ec2c2da4a745"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/activity-air-conditioning-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "d98307ceaac4d5f7d88a"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/activity-back-to-school-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "bc7b708bc6ddda73766c"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/activity-best-sellers",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "ead5837c9bbf7c338e28"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/activity-black-friday",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "9cdf7b10847684f79c79"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/activity-childrens-day",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "2f2e7a8a8fe04f0c1f92"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/pages/diy-ideas",
+      "family": "blog_home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "150eed3971664988acd5"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/products/0-25t-10ft-lever-chain-hoist-w-portable-hooks-360-hook-0-25ton-5ft",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "b941770e4750303f4601"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/products/0-25t-10ft-lever-chain-hoist-w-portable-hooks-360-hook-0-5ton-10ft",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "40af6ffbe2b29253d6f6"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/products/0-25t-10ft-lever-chain-hoist-w-portable-hooks-360-hook-0-5ton-5ft",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "dd46e3e3a55d7e25f280"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/products/0-25t-10ft-lever-chain-hoist-w-portable-hooks-360-hook-0-75ton-10ft",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "8295d1c5abbe5b14f614"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/products/0-25t-10ft-lever-chain-hoist-w-portable-hooks-360-hook-0-75ton-20ft",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "7a8d4f73c98e02e428e9"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/",
+      "family": "home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "7ef2b0c6be9a560c8ecf"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/account/login",
+      "family": "login",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "171b45a2de0e561c2677"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/account/register",
+      "family": "register",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "fd693c4df9d5405d1a50"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/cart",
+      "family": "cart",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ac9292d1b4fbf08e7839"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=rug",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "343d446df98cb34f555d"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=rug&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "8713521adac2eb0a98f9"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=rug&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a1af84d05602da5eb182"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=rug&after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "search",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a297e13cd2c5c0196b24"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=rug&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "cda56b7670647da2e098"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=drill",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "7bae9b32437f802724c1"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=drill&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "c9d65abf80994a874a24"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=drill&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "0417de6813509909ea5f"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=drill&after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "search",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "fd79a7635f1bc3a193e8"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=drill&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "33ccbe5552d6fce925b0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=table",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "b2aeecb05625f959e514"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=table&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a541ca3a0a2218690003"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=table&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "37aa3b1265385d38c147"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=table&after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "search",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "cd21932d234eff9281c0"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=table&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "25267941da00288f9b44"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=chair",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "4301321669931dfe1ff1"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=chair&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ef0fc996f02251b06856"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=chair&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "f4fdfaf6c68181dfecda"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=chair&after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "search",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "8a3744026732c6333553"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=chair&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a5b1e14fda595960b811"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=ladder",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "53f3cdd3c1e0d37adaa9"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=ladder&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "59433ee11e2da9426437"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=ladder&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ca2fbd0a95fcfa8774b4"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=ladder&after=eyJsYXN0X3ZhbHVlIjoiNjMiLCJsYXN0X2lkIjoxMDAxNDQxODYzMzAxNywib2Zmc2V0Ijo2M30%3D",
+      "family": "search",
+      "scenario": "page",
+      "source": {
+        "kind": "observed_control",
+        "control": "next page link",
+        "label": "page 2 cursor"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "844ef5deb1d23b61ad2e"
+    },
+    {
+      "market": "us",
+      "url": "https://garvee-us-test-resolve-547493248390.us-east4.run.app/search?q=ladder&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ae82846692d1c9bdf27c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/",
+      "family": "home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "3efbd80550f72c06194f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/agents.md",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "0f582c97e56a23662cc1"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "bfb047e02b1734801c61"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/how-tos",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "3996e600bb32a143eee2"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/news",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "637eaccfef2f1c14825c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/trending-now",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "9cec2d92e334763e318e"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides/gazebo-vs-canopy",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "1c296d56a803a2d16d8f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides/how-to-choose-air-conditioner-uk",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "fb1177cc23feff63376b"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides/how-to-choose-the-right-camping-tent-for-your-summer-adventures",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "89bc8200039f4db19ecd"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides/late-summer-camping-guide-warm-days-cool-nights-weather-tips",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "eb9401c27311d6dcd0bb"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/blogs/buying-guides/outdoor-furniture-buying-guide",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "060fb777c0b4348f1fb8"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/abstract-rugs",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "170aafa0f6843a337ca8"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/abstract-rugs?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "2625da56630b18d00fd1"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/abstract-rugs?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ae5ff4e477636b4b5c77"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/abstract-rugs?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "cdfd0c9b595e5e801e3b"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/access-barriers-crowd-control",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d3664814434cf2fc1ac7"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/access-barriers-crowd-control?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "2debbd93a72d8ce1cfa6"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/access-barriers-crowd-control?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "2fe7e41c144439be1b58"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/access-barriers-crowd-control?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "acf715e5bab22ce6413c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/action-aids",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "6b3d3b1f79fd7f92f932"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/action-aids?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "3a2754f75ae8e0b079fd"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/action-aids?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "c97fbbb44fa5e2da0527"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/action-aids?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "e5fd0da034069a472da7"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/adjustable-workbench",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d68cfc6f01fb2345df5c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/adjustable-workbench?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "0b76c4c3e61cad257be6"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/adjustable-workbench?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "cfabcc6d68ff811c9a0a"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/adjustable-workbench?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b03d6af2c0ef75be7337"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/agricultural-tires",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "2c6ac28ca9a01473d666"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/agricultural-tires?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "9dea3364e3de78dad8b6"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/agricultural-tires?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "81d3d75cdadd15d60dd2"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/collections/agricultural-tires?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "79a5460a26da5f612e5c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/about-garvee",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "a71241591c99ba9153ed"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/accessibility-statement",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "dae27ddb3c86b81ecc28"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/affiliate",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5f98ce604c7b9206967c"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/contact",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "831eb8e72c750a6ef2c6"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/contact-us",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "1430cc3d3a2fc9045d62"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/extended-service-protection",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5c823f9b9ec7ec9d8320"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/help-center",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "125c5553b41a65fb5a97"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/influencer-program",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "c5a069fdc213bf81a072"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/mygarvees-rewards",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "f2b4805634c02556e73f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/outlets",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "d3a60d6f3d6e1b615db4"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/payments-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "acec49fbe5b68b1cae3f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/privacy-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "806d8fc89a9211b5c555"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/refund-return-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "40944bd5dfee45b4923b"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/share-and-win",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "9c532a845e02315abb34"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/shipping-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "1ab6bc46804299955a7b"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/terms-of-service",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "a5c782dbd8d08795749f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/track-your-order",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "a64fd20a1928292db11e"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/warranty-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "4dc35c27e33ef6179465"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/activity-easter-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "cd06e794e3ea5ee5ce56"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/activity-spring-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "26cdc47897c90d4a186f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/bank-holiday-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "24a146018c8ae9b4944d"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/pages/diy-ideas",
+      "family": "blog_home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "4c48bf2f875adf34ea50"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/products/15ft-extra-large-double-sided-rectangular-patio-umbrella-with-solar-led-lights-heavy-duty-waterproof-windproof-outdoor-market-shade-crank-system-base-sandbag-for-poolside-garden-backyard-lawn",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "7a0fe09b3329e6f691a5"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/products/16-ft-9-in-1-inflatable-water-slide-park-for-backyard-dual-racing-slides-climbing-wall-trampoline-splash-pool-water-firearm-basketball-hoop-durable-oxford-kids-3-10-indoor-outdoor-summer-fun",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "693c92513cd8e06afe41"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/products/3-tier-heavy-duty-plastic-utility-cart-with-wheels-gray-rolling-service-cart-with-3-shelves-for-restaurant-office-kitchen-and-hotel",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "6485fdce8fa2ced5d8f2"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/products/color-black-specification-germany-size-240-phk-343u835h",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "e3b2f682fb31e1bd56ca"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/products/color-dark-gray-specification-germany-size-pho-16own68a",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "5860ef886dbf99089e3e"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/account/login",
+      "family": "login",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "cd0d1b93d48c2b9049d8"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/account/register",
+      "family": "register",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "dfdd04132e13dbf41217"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/cart",
+      "family": "cart",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "2257e46c7275de9ed3b3"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=rug",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "c8521e2c450344ea55ac"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=rug&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "0e9923a8c05bbbf347a8"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=rug&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a67fbd2b6a6c14d6a70e"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=rug&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "a1d15cc4bd1e8808661d"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=drill",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "393b39139ecee029f2bc"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=drill&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "10e635c72111004deda9"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=drill&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "9f9d3ff89d8b7914c223"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=drill&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "33b4b813ecc834045883"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=table",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "392b4ac42ae9fe8f9f6b"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=table&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "442b1f4d20c7a5cddce0"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=table&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "3a5f92ff55aecb35e9ea"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=table&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "3d82942dd729c42793f8"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=chair",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "0fa38ff888bf159b63bd"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=chair&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "f6616cc9c4cdac7b6162"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=chair&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b42213a7d092b3340eec"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=chair&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "36fe6fbcbc0faa8ebc3f"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=ladder",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "9f63a52000f53444d9f1"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=ladder&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "4a1b2c975e35a7e40bd1"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=ladder&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "8aff9f05ca08d68fcd2a"
+    },
+    {
+      "market": "uk",
+      "url": "https://garvee-uk-test-resolve-547493248390.europe-west2.run.app/search?q=ladder&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "41d7142bfc83f5bbadde"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/agents.md",
+      "family": "other",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "4d466e804dd0e530e50b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/buying-guides",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "b8bdb286395e1c7c76db"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/how-tos",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "b078ebbb50b5913f0ad6"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/news",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "64469ebc75a40db72d7e"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/trending-now",
+      "family": "blog_list",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "8b0ae6c459b080db04a1"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/buying-guides/chafing-dish-fuel-vs-electrice-warmers",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d3253532268631407bc3"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/buying-guides/is-a-cordless-snow-blower-worth-it-for-canadian-homeowners",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "2980ccb6aed0efbd38e2"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/how-tos/how-to-teach-kids-road-safety-with-ride-on-toys-canada",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "e2d63dff834dc289bc83"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/blogs/trending-now/best-log-handling-tools-for-canadian-timber",
+      "family": "article",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "c9151fda7e13c947304a"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%B5%81%E9%AB%98%E8%BD%AC0107",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ce63ff178768b041b2b4"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%B5%81%E9%AB%98%E8%BD%AC0107?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "440ea8c3ce6a1a3ffe8c"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%B5%81%E9%AB%98%E8%BD%AC0107?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "1129fa2d9b726bdcbd0b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E4%BD%8E%E6%B5%81%E9%AB%98%E8%BD%AC0107?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "5a7aed0df1beb8aa8ee0"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94%E7%AB%A5%E8%BD%A6%E4%B8%BB%E6%8E%A8",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ef0bf06f29f1dc503948"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94%E7%AB%A5%E8%BD%A6%E4%B8%BB%E6%8E%A8?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "710f9332f650cc987866"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94%E7%AB%A5%E8%BD%A6%E4%B8%BB%E6%8E%A8?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "e974ca8d8cd4ea074dc2"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/%E9%BB%91%E4%BA%94%E7%AB%A5%E8%BD%A6%E4%B8%BB%E6%8E%A8?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "e38427315ab16a8ce24e"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/abstract-rugs",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "4bbda8fb25c5595ca8ac"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/abstract-rugs?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ddb7898cd23a09a94d9f"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/abstract-rugs?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "8b21d6c3b8e409e087be"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/abstract-rugs?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "4de622f73a3bb65224b8"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/access-barriers-crowd-control",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "c4d500c1936e9d6ffbd7"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/access-barriers-crowd-control?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "8c115b853570fe99de37"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/access-barriers-crowd-control?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "446ae8946d5ac43dcdf5"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/access-barriers-crowd-control?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "615454e908e8ce8de5ee"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/action-aids",
+      "family": "category",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "209eca8f90cbe6894444"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/action-aids?sort_by=price-ascending",
+      "family": "category",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "5a2d4e75c38b06f84a78"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/action-aids?sort_by=price-descending",
+      "family": "category",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "d48d90fa648721541093"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/collections/action-aids?filter.v.availability=true",
+      "family": "category",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b66e27f1a4934e0e7b69"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/about-garvee",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "5374a25af74f4069c918"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/accessibility",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "4a5a50678999186c6052"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/affiliate",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "370a8c9b36c932b5c1e3"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/carebox-package-protection",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "728a0d869ff4a71166a6"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/contact",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "dc80aedf697d4fd926aa"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/contact-us",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "57be79ffd4d0a79b9d0b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/extended-service-protection",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "c29ce780a3608690a570"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/help-center",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "ffcb5576479bba5b55bb"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/influencer-program",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "0e818c2ffb7f814d1ad0"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/payments-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "cfffb2024cb5ab400ba3"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/privacy-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "916dd06269a3516778bc"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/product-reviews",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "ef00aa05dd9275696dbf"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/refund-return-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "7d81126fcbc40a694815"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/shipping-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "0baa252028cb38cd23fd"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/terms-of-service",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "7aca34942f762064683c"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/track-your-order",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "06c2bb4debef29c6e078"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/warranty-policy",
+      "family": "footer",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [
+        "footer"
+      ],
+      "id": "dcbf781e78aad248ce36"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/back-to-school",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "2269a27bd9bf7524f33b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/black-friday",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "98721d20b97d3724553e"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/easter-sale-garvee",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "798516de72e9a64d9f2b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/fathers-day-sale-garvee",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "8959ef407c7c8b49b66b"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/halloween-sale",
+      "family": "campaign",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "business_role": "campaign",
+      "id": "44d828e69344857309bf"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/pages/diy-ideas",
+      "family": "blog_home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "e54c3f05cc561d3d8eea"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/products/16gal-kitchen-trash-can-pho-11epycdh",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "f2cd8ff29ee1feb0a099"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/products/2000-lbs-workbench-for-garage-pho_0zee955m",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "9dd9182895cfffb1319a"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/products/58l-trash-can-combination-set-pis-00w48qpd",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "7c346694b666022c71e2"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/products/60x22-inch-adjustable-workbench-pho-0zedgvvf",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "fff730c06e31711af717"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/products/bull-float-magnesium-concrete-float-pho-125w5i0o",
+      "family": "product",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d23607d44dff9a671375"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/",
+      "family": "home",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "47418431d8fd41335678"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/account/register",
+      "family": "register",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "8a716c5527ffa0847f77"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/cart",
+      "family": "cart",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "35c634016da538dc0cf0"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=rug",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "c3640dfb1ac13cea4bfa"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=rug&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "1b610eec2a2f2df05e22"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=rug&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b1254aaa92d2b6a9db77"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=rug&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "b92579858be977eb14c8"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=drill",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "ac5303db595d9ce9eb96"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=drill&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "29058fcd048e4a44e5af"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=drill&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "401857423ea88e41b925"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=drill&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "edea1257b2ab0ba8693c"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=table",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "37a268665de5bd0007b6"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=table&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "15899c13d1d673b826c6"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=table&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "49fba6a8295685718712"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=table&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "9194a7025d24498bae4a"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=chair",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "d3b25c5b0eaeeb157280"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=chair&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "204c4ff8fff8ff764f9f"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=chair&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "543cfecbda6d70381ade"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=chair&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "74ab5cfa0847f4d75e90"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=ladder",
+      "family": "search",
+      "scenario": "default",
+      "source": {
+        "kind": "sitemap_inventory"
+      },
+      "scenario_verified": false,
+      "entry_roles": [],
+      "id": "3732fa0d42a2b98b80e8"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=ladder&sort_by=price-ascending",
+      "family": "search",
+      "scenario": "sort",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: Low to High"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "db409e3ed453dc9a9f16"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=ladder&sort_by=price-descending",
+      "family": "search",
+      "scenario": "sort_desc",
+      "source": {
+        "kind": "observed_control",
+        "control": "sort menu",
+        "label": "Price: High to Low"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "ac2b7b164a50aa763e1c"
+    },
+    {
+      "market": "ca",
+      "url": "https://garvee-ca-test-resolve-547493248390.us-east4.run.app/search?q=ladder&filter.v.availability=true",
+      "family": "search",
+      "scenario": "filter",
+      "source": {
+        "kind": "observed_control",
+        "control": "availability filter",
+        "label": "in stock"
+      },
+      "scenario_verified": true,
+      "entry_roles": [],
+      "id": "91dfc9dab501b0f208b9"
+    }
+  ],
+  "discovery": {
+    "complete": false,
+    "reason": "Capability smoke seeds only. Run discover and supplement browser-derived routes, all footer links and verified controls before a coverage audit."
+  },
+  "requirements": [
+    {
+      "market": "us",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "us",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "uk",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    },
+    {
+      "market": "ca",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota"
+    }
+  ],
+  "quota": [
+    {
+      "market": "us",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered",
+      "selected": 25,
+      "candidates": 25,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 10,
+      "candidates": 10,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "us",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered",
+      "selected": 18,
+      "candidates": 18,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 4,
+      "candidates": 4,
+      "met": false,
+      "shortfall": 1,
+      "reason": "site has fewer candidates than required"
+    },
+    {
+      "market": "uk",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 6,
+      "candidates": 6,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "uk",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": false,
+      "shortfall": 4,
+      "reason": "site has fewer candidates than required"
+    },
+    {
+      "market": "ca",
+      "family": "home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "footer",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "all_discovered",
+      "selected": 17,
+      "candidates": 17,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "category",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "product",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "blog_home",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "blog_list",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 4,
+      "candidates": 4,
+      "met": false,
+      "shortfall": 1,
+      "reason": "site has fewer candidates than required"
+    },
+    {
+      "market": "ca",
+      "family": "article",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 4,
+      "candidates": 4,
+      "met": false,
+      "shortfall": 1,
+      "reason": "site has fewer candidates than required"
+    },
+    {
+      "market": "ca",
+      "family": "campaign",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 10,
+      "candidates": 10,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "login",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 1,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "register",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "cart",
+      "scenario": "default",
+      "target": 1,
+      "minimum": 1,
+      "singleton": true,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort_desc",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 5,
+      "candidates": 5,
+      "met": true,
+      "shortfall": 0,
+      "reason": ""
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+page",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "sort+page+filter",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "tracking",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "search",
+      "scenario": "zero_results",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 0,
+      "candidates": 0,
+      "met": false,
+      "shortfall": 5,
+      "reason": "no candidate discovered"
+    },
+    {
+      "market": "ca",
+      "family": "other",
+      "scenario": "default",
+      "target": 5,
+      "minimum": 5,
+      "singleton": false,
+      "selection": "quota",
+      "selected": 1,
+      "candidates": 1,
+      "met": false,
+      "shortfall": 4,
+      "reason": "site has fewer candidates than required"
+    }
+  ]
+}
